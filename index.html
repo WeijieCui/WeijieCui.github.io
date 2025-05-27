@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Software Engineer Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        .masonry-container {
+            column-count: 2;
+            column-gap: 1rem;
+            margin: 1rem;
+        }
+        .masonry-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1rem;
+            break-inside: avoid;
+        }
+
+        @media screen and (max-width: 768px) {
+            .masonry-container { column-count: 2; }
+        }
+        @media screen and (max-width: 480px) {
+            .masonry-container { column-count: 1; }
+        }
+    </style>
 </head>
 
 <body>
@@ -33,8 +53,8 @@
         <!-- Projects -->
         <div class="box">
             <h3 class="title is-4">Recent Projects</h3>
-            <div class="columns is-multiline">
-                <div class="column is-half">
+            <div class="is-multiline masonry-container">
+                <div class="masonry-item">
                     <div class="card">
                         <div class="card-content">
                             <p class="title is-5"><a
@@ -48,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-half">
+                <div class="masonry-item">
                     <div class="card">
                         <div class="card-content">
                             <p class="title is-5"><a href="https://github.com/WeijieCui/DataScience">DataScience</a></p>
@@ -61,6 +81,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="masonry-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-5"><a href="https://github.com/WeijieCui/VisualDota">VisualDota</a></p>
+                            <p>In disaster response and rescue operations, rapid and accurate identification of critical
+                                infrastructure and affected zones is essential.
+                                This project used three models,
+                                <a href="https://arxiv.org/pdf/1506.02640">YOLO V1</a> (Building from scratch),
+                                <a href="https://docs.ultralytics.com/models/yolo11/">YOLO V11</a> (Pretrained, Oriental
+                                Bounding Box),
+                                <a href="https://arxiv.org/abs/1506.01497">Faster R-CNN</a>
+                                (Pretrained + Transfering, Horizontal Bounding Box),
+                                to verify their performance on the
+                                <a href="https://captain-whu.github.io/DOTA/dataset.html">DOTA</a> dataset.
+                                Practice shows that the YOLO V11 model performs best on the dota dataset.</p>
+                            <img src="asserts/images/result_plane4.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -69,9 +108,11 @@
             <h3 class="title is-4">Education</h3>
             <ul>
                 <li><strong>Master of Data Science and Advanced Computing </strong>
-                    - University of Reading, 2024 - 2025 | Distinct (85/100, so far)</li>
+                    - University of Reading, 2024 - 2025 | Distinct (85/100, so far)
+                </li>
                 <li><strong>Bachelor of Machine Design</strong>
-                    - South China Agricultural University, 2008 - 2012 | Merit (83.97/100) </li>
+                    - South China Agricultural University, 2008 - 2012 | Merit (83.97/100)
+                </li>
             </ul>
         </div>
 
